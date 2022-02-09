@@ -1,73 +1,73 @@
 header {
-    background-color: $primary-color;
-    height: 70px;
+  background-color: $primary-color;
+  height: 70px;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    color: white;
+    margin: 0 auto;
+    font-size: 26px;
+    width: 150px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-portrait) {
+      margin: 0 0 0 50px;
+    }
+    @media screen and (min-width: $tablet-landscape) {
+      font-size: 22px;
+    }
+  }
+
+  .search-mobile {
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+    @media screen and (min-width: $tablet-portrait) {
+      display: none;
+    }
+  }
+
+  form {
+    background-color: white;
+    margin: 0 50px 0 auto;
+    width: 300px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
-
-    h1 {
-        color: white;
-        margin: 0 auto;
-        font-size: 26px;
-        width: 150px;
-        text-align: center;
-        
-        @media screen and (min-width: $tablet-portrait) {
-            margin: 0 0 0 50px;
-        }
-        @media screen and (min-width: $tablet-landscape) {
-            font-size: 22px;
-        }
+    padding: 8px 15px;
+    gap: 10px;
+    @media screen and (max-width: $tablet-portrait) {
+      display: none;
     }
 
-    .search-mobile {
-        width: 30px;
-        position: absolute;
-        right: 20px;
-        color: white;
-        cursor: pointer;
-        @media screen and (min-width: $tablet-portrait) {
-            display: none;
+    svg {
+      width: 22px;
     }
+    input {
+      outline: none;
+      flex: 1;
+      border: transparent;
     }
-
-    form {
-        background-color: white;
-        margin: 0 50px 0 auto;
-        width: 300px;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        padding: 8px 15px;
-        gap: 10px;
-        @media screen and (max-width: $tablet-portrait) {
-            display: none;
-        }
-        
-        svg {
-            width: 22px;
-        }
-        input {
-            outline: none;
-            flex: 1;
-            border: transparent;
-        }
-
-    }
+  }
 }
 
 .mobile-form {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $primary-color;
-    input {
-        padding: 10px 10px;
-        width: 80%;
-        border-radius: 5px;
-        border-color: transparent;
-    }
-    @media screen and (min-width: $tablet-portrait) {
-        display: none;
-    }
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+  input {
+    padding: 10px 10px;
+    width: 80%;
+    border-radius: 5px;
+    border-color: transparent;
+    font-size: 16px;
+  }
+  @media screen and (min-width: $tablet-portrait) {
+    display: none;
+  }
 }
