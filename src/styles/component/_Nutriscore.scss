@@ -1,0 +1,66 @@
+$color-A: rgb(0, 131, 62);
+$color-B: rgb(128, 189, 28);
+$color-C: rgb(255, 205, 0);
+$color-D: rgb(241, 129, 0);
+$color-E: rgb(234, 59, 0);
+
+.nutriscore {
+  border-radius: 10px;
+  padding: 5px 5px 12px 5px;
+  background-color: white;
+  transform: scale(0.7);
+  h3 {
+    color: rgb(120, 120, 120);
+    font-size: 14px;
+    padding: 0;
+    margin: 0 0 8px 8px;
+  }
+  .grade {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      background-color: $color-A;
+      color: lighten($color-A, 10);
+      font-size: 24px;
+      padding: 5px 5px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      &:first-child {
+        border-radius: 10px 0 0 10px;
+        padding-left: 8px;
+      }
+      &:last-child {
+        border-radius: 0 10px 10px 0;
+        padding-right: 8px;
+      }
+      &:nth-of-type(2) {
+        background-color: $color-B;
+        color: lighten($color-B, 10);
+      }
+      &:nth-of-type(3) {
+        background-color: $color-C;
+        color: lighten($color-C, 10);
+      }
+      &:nth-of-type(4) {
+        background-color: $color-D;
+        color: lighten($color-D, 10);
+      }
+      &:nth-of-type(5) {
+        background-color: $color-E;
+        color: lighten($color-E, 10);
+      }
+      &.active {
+        transform: scale(1.5);
+        padding: 5px 5px;
+        border-radius: 13px;
+        margin: 0 5px;
+        border: 2px solid white;
+        color: white;
+      }
+    }
+  }
+}

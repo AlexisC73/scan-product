@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Nutriscore from './Nutriscore'
 
 interface ProductProps {
   barcode: string | undefined
@@ -65,7 +66,8 @@ export default function Product({ barcode }: ProductProps) {
                 </li>
               ))}
             </ul>
-            <div className='nutriscore'>{data.product.nutriscore_grade}</div>
+            <Nutriscore grade={data.product.nutriscore_grade.toUpperCase()} />
+            <div></div>
           </div>
           <h1>
             {productName}
